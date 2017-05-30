@@ -7,6 +7,8 @@
   "scripts": {
     "start": "gulp watch",
     "test": "jest",
+    "cover": "./node_modules/.bin/jest --coverage && cp ./coverage/coverage-final.json ./coverage/coverage.json",
+    "lint": "./node_modules/.bin/eslint .",
     "test-debug": "node-debug --nodejs --harmony ./node_modules/jest-cli/bin/jest.js --runInBand"
   },
   "license": "ISC",
@@ -19,8 +21,11 @@
     "browser-sync": "^2.8.0",
     "browserify": "^11.0.0",
     "classnames": "^2.2.0",
-    "eslint": "^1.0.0",
-    "eslint-plugin-react": "^3.1.0",
+    "eslint": "^3.13.1",
+    "eslint-config-airbnb": "^14.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.9.0",
     "exorcist": "^0.4.0",
     "gulp": "^3.9.0",
     "gulp-sass": "^2.0.4",
